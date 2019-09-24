@@ -1,0 +1,16 @@
+-I/usr/include/tumtools
+-I/usr/include/eigen3
+-I/usr/include/QtSerialPort
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-I/home/hsa/Desktop/ImuTemplate/build
+-I/home/hsa/Desktop/ImuTemplate
+-I/home/hsa/Desktop/ImuTemplate/include
+-D$<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-DQT_NO_KEYWORDS
+-o
+/home/hsa/Desktop/ImuTemplate/build/include/DataProcessing/moc_CalcMagCalib.cxx
+/home/hsa/Desktop/ImuTemplate/include/DataProcessing/CalcMagCalib.h

@@ -1,0 +1,255 @@
+/*********************************************************************
+* Compiler:         QT Creator V2.4.1
+*                   QT V 4.8.0 (64 bit)
+*
+* Company:          Institute for Cognitive Systems
+*                   Technical University of Munich
+*
+* Author:           Florian Bergner
+*
+* Compatibility:
+*
+* Software Version: V1.0
+*
+* Created:          05.05.2014
+* Changed:          05.05.2014
+*
+* Comment:
+*
+*
+********************************************************************/
+
+#include "DataProcessing/CalcGyroCalib.h"
+#include <QDebug>
+#include <iostream>
+
+CalcGyroCalib::CalcGyroCalib(QObject* parent) : QObject(parent)
+{
+    m_gx.reserve(1000);
+    m_gy.reserve(1000);
+    m_gz.reserve(1000);
+
+    m_started = false;
+}
+
+CalcGyroCalib::~CalcGyroCalib()
+{
+
+}
+
+
+void CalcGyroCalib::calc()
+{
+    int n = m_gx.size();
+
+    qDebug("n = %d", n);
+
+    if(n==0)
+    {
+        return;
+    }
+
+    const VectorXd x = Map<const VectorXd>(m_gx.constData(),n,1);
+    const VectorXd y = Map<const VectorXd>(m_gy.constData(),n,1);
+    const VectorXd z = Map<const VectorXd>(m_gz.constData(),n,1);
+
+    Matrix3d A = Matrix3d::Identity();
+    Vector3d w = Vector3d::Zero();
+
+    int m = x.rows();
+    int nn = x.cols();
+
+    int num = std::max(nn,m);
+
+    MatrixXd m_meas(num, 9);
+
+    VectorXd p = VectorXd::Zero(9);    // ellipsoid parameters
+
+    for (int i=0;i<num;i++){
+        m_meas.row(i)<<x(i)*x(i), y(i)*y(i), z(i)*z(i), 2*x(i)*y(i), 2*x(i)*z(i), 2*z(i)*y(i), 2*x(i), 2*y(i), 2*z(i);
+    }
+
+    VectorXd d = VectorXd::Ones(num);
+
+    p = CalcGyroCalib::solve(m_meas, d);
+
+    w = calcEllipsoidCenter(p);
+
+    A = calcEllipsoidMatrix(p,w);
+
+
+
+
+
+
+    qDebug("w =\n%s", matrixToString(w).toAscii().data());
+    qDebug("A =\n%s", matrixToString(A).toAscii().data());
+
+    m_A = A;
+    m_w = w;
+}
+
+QString CalcGyroCalib::matrixToString(const Eigen::MatrixXd& m) const
+{
+    std::ostringstream out;
+
+    out.str("");
+    out.clear();
+    out << m;
+
+    return QString(out.str().c_str());
+}
+
+Vector3d CalcGyroCalib::calcEllipsoidCenter(const VectorXd& p) const
+{
+    // ??????????????????????????????????????????????????????????? //
+    //      find the center w of the ellipsoid
+    //
+    // ??????????????????????????????????????????????????????????? //
+
+    Vector3d w = Vector3d::Zero();
+
+    float A = p(0);
+    float B = p(1);
+    float C = p(2);
+    float D = p(3);
+    float E = p(4);
+    float F = p(5);
+    float G = p(6);
+    float H = p(7);
+    float K = p(8);
+
+    //qDebug("A =\n%s", A);
+    Matrix3d A_delta;
+    A_delta<< A, D, E, D, B, F, E, F, C;
+    Vector3d b_delta;
+    b_delta<< 2*G, 2*H, 2*K;
+
+    w = CalcGyroCalib::solve((-2*A_delta), b_delta);
+
+
+
+    // ??????????????????????????????????????????????????????????? //
+
+    qDebug("w =\n%s", matrixToString(w).toAscii().data());
+    return w;
+}
+
+Matrix3d CalcGyroCalib::calcEllipsoidMatrix(const VectorXd& p, const Vector3d w) const
+{
+    // ??????????????????????????????????????????????????????????? //
+    //      find the ellipsoid matrix A
+    //
+    // ??????????????????????????????????????????????????????????? //
+    Matrix3d A_delta;
+    A_delta<< p(0), p(3), p(4), p(3), p(1), p(5), p(4), p(5), p(2);
+
+    Vector3d b;
+    b<< p(6), p(7), p(8);
+
+    int c=-1;
+
+    Matrix4d A_bar;
+    A_bar << A_delta, b, b.transpose(), c;
+
+    Matrix4d T;
+    T <<  Matrix3d::Identity(), w, Vector3d::Zero().transpose(), 1;
+
+    Matrix4d A_hat;
+    A_hat = T.transpose()*A_bar*T;
+
+
+    Matrix3d A = Matrix3d::Identity();     // resulting 3x3 matrix for ellipoid
+
+    A << A_hat(0,0),A_hat(0,1),A_hat(0,2),A_hat(1,0),A_hat(1,1),A_hat(1,2),A_hat(2,0),A_hat(2,1),A_hat(2,2);
+    A=-A/A_hat(3,3);
+
+
+    // ??????????????????????????????????????????????????????????? //
+
+    qDebug("A =\n%s", matrixToString(A).toAscii().data());
+    return A;
+}
+
+Eigen::VectorXd CalcGyroCalib::solve(const Eigen::MatrixXd& A,
+                                    const Eigen::VectorXd& b) const
+{
+    int m = A.rows();
+    int n = A.cols();
+
+    int pe = std::min(n,m);
+
+    // ??????????????????????????????????????????????????????????? //
+    //      solve the linear equation system A*x = b using SVD
+    //
+    // ??????????????????????????????????????????????????????????? //
+
+    VectorXd p = VectorXd::Zero(pe);
+
+    JacobiSVD<MatrixXd> svd(A,ComputeThinV | ComputeThinU);
+    VectorXd Sig = svd.singularValues();
+    MatrixXd U = svd.matrixU();
+    MatrixXd V = svd.matrixV();
+
+    p = V*Sig.asDiagonal().inverse()*U.transpose()*b;
+
+    // ??????????????????????????????????????????????????????????? //
+
+    return p;
+}
+
+void CalcGyroCalib::start()
+{
+    if(m_started)
+    {
+        return;
+    }
+
+    m_gx.reserve(1000);
+    m_gy.reserve(1000);
+    m_gz.reserve(1000);
+
+    m_gx.clear();
+    m_gy.clear();
+    m_gz.clear();
+
+    m_started = true;
+    Q_EMIT started();
+}
+
+void CalcGyroCalib::stop()
+{
+    if(!m_started)
+    {
+        return;
+    }
+
+    m_started = false;
+
+    m_mutex.lock();
+    calc();
+    m_mutex.unlock();
+
+    Q_EMIT stopped();
+    Q_EMIT newCalib(m_A, m_w);
+}
+
+void CalcGyroCalib::newRawImuData(ImuData d)
+{
+    if(!m_started)
+    {
+        return;
+    }
+
+    if(!m_mutex.tryLock())
+    {
+        return;
+    }
+
+    m_gx.append(d.gx());
+    m_gy.append(d.gy());
+    m_gz.append(d.gz());
+
+    m_mutex.unlock();
+
+}

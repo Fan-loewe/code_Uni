@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "include/RazorImu/moc_FtdiPort.cxx"
+  "include/RazorImu/moc_RazorImu.cxx"
+  "include/RazorImu/moc_ImuDataLogger.cxx"
+  "include/RazorImu/moc_RazorImu2.cxx"
+  "include/qcustomplot/moc_qcustomplot.cxx"
+  "include/DataProcessing/moc_AdjustCosys.cxx"
+  "include/DataProcessing/moc_ApplyAccCalib.cxx"
+  "include/DataProcessing/moc_CalcAccCalib.cxx"
+  "include/DataProcessing/moc_ApplyGyroCalib.cxx"
+  "include/DataProcessing/moc_CalcGyroCalib.cxx"
+  "include/DataProcessing/moc_ApplyMagCalib.cxx"
+  "include/DataProcessing/moc_CalcMagCalib.cxx"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/AdjustCosys.cpp.o"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/ApplyAccCalib.cpp.o"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/CalcAccCalib.cpp.o"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/ApplyGyroCalib.cpp.o"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/CalcGyroCalib.cpp.o"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/ApplyMagCalib.cpp.o"
+  "CMakeFiles/dataProcessing.dir/src/DataProcessing/CalcMagCalib.cpp.o"
+  "CMakeFiles/dataProcessing.dir/include/RazorImu/moc_FtdiPort.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/RazorImu/moc_RazorImu.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/RazorImu/moc_ImuDataLogger.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/RazorImu/moc_RazorImu2.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/qcustomplot/moc_qcustomplot.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_AdjustCosys.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_ApplyAccCalib.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_CalcAccCalib.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_ApplyGyroCalib.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_CalcGyroCalib.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_ApplyMagCalib.cxx.o"
+  "CMakeFiles/dataProcessing.dir/include/DataProcessing/moc_CalcMagCalib.cxx.o"
+  "libdataProcessing.pdb"
+  "libdataProcessing.so"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/dataProcessing.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

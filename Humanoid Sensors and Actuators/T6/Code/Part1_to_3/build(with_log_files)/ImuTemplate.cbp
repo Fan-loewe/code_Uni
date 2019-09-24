@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="ImuTemplate" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\cmake\;CMake Files\..\..\..\..\usr\share\cmake\Ftdi\;CMake Files\..\..\..\..\usr\share\cmake\QtSerialPort\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="qcustomplot">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/libqcustomplot.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 qcustomplot" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="qcustomplot/fast">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/libqcustomplot.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 qcustomplot/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="razorImu">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/librazorImu.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 razorImu" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="razorImu/fast">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/librazorImu.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 razorImu/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uninstall">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 uninstall" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="imu">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/imu" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 imu" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="imu/fast">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/imu" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 imu/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dataProcessing">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/libdataProcessing.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 dataProcessing" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dataProcessing/fast">
+         <Option output="/home/hsa/Desktop/ImuTemplate/build/libdataProcessing.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_KEYWORDS" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/build" />
+            <Add directory="/home/hsa/Desktop/ImuTemplate/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/QtSerialPort" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/tumtools" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 dataProcessing/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/hsa/Desktop/ImuTemplate/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/hsa/Desktop/ImuTemplate/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/AdjustCosys.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/ApplyAccCalib.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/ApplyGyroCalib.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/ApplyMagCalib.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/CalcAccCalib.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/CalcGyroCalib.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/DataProcessing/CalcMagCalib.h">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/RazorImu/FtdiPort.h">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/RazorImu/ImuData.h">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/RazorImu/ImuDataLogger.h">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/RazorImu/RazorImu.h">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/RazorImu/RazorImu2.h">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/include/qcustomplot/qcustomplot.h">
+         <Option target="qcustomplot"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/Applications/main.cpp">
+         <Option target="imu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/Applications/mainwindow.cpp">
+         <Option target="imu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/Applications/mainwindow.h">
+         <Option target="imu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/Applications/mainwindow.ui">
+         <Option target="imu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/AdjustCosys.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/ApplyAccCalib.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/ApplyGyroCalib.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/ApplyMagCalib.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/CalcAccCalib.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/CalcGyroCalib.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/DataProcessing/CalcMagCalib.cpp">
+         <Option target="dataProcessing"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/RazorImu/FtdiPort.cpp">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/RazorImu/ImuData.cpp">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/RazorImu/ImuDataLogger.cpp">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/RazorImu/RazorImu.cpp">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/RazorImu/RazorImu2.cpp">
+         <Option target="razorImu"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/src/qcustomplot/qcustomplot.cpp">
+         <Option target="qcustomplot"/>
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/../../../../usr/share/cmake/Ftdi/FtdiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Ftdi\" />
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/../../../../usr/share/cmake/QtSerialPort/QtSerialPortConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\QtSerialPort\" />
+      </Unit>
+      <Unit filename="/home/hsa/Desktop/ImuTemplate/../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
